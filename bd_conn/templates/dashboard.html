@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Painel de Controle</h1>
+    <h2>Bem-vindo, {{ usuario }}!</h2>
+
+    <p>Aqui você pode gerenciar suas informações e realizar outras ações.</p>
+
+    <h3>Ações</h3>
+    <ul>
+        <li><a href="{{ url_for('editar', id=usuario_id) }}">Editar Perfil</a></li>
+        <li><a href="{{ url_for('logout') }}">Sair</a></li>
+    </ul>
+</body>
+</html>
